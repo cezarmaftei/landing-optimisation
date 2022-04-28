@@ -47,8 +47,8 @@ Va deveni
     - Pe Mac, navigheaza in folderul parinte al paginii(De ex daca pagina e in D:/work/pagina-mea, navighezi in D:/work), da click pe folderul paginii, apoi Finder->Services->New Terminal at Folder. Mai multe detalii <a target="_blank" rel="nofollow noopener" href="https://www.maketecheasier.com/launch-terminal-current-folder-mac/#:~:text=Open%20the%20parent%20directory%20where,shortcut%20that%20you%20assigned%20before.">aici</a>
 4. Scrie `npm i` si apasa enter. Asteapta sa se termine procesul.
 5. Scrie `grunt` si apasa enter. Asteapta sa se termine procesul. La final va aparea cate o versiune minmizata pentru fiecare html. Ex: pentru `index.html` se va genera un `index.min.html`
-6. **Deschide paginile in browser si compara-le ca sa fii sigur ca arata si functioneaza la fel. Acorda atentie sporita la elementele pe care le initializezi cu javascript, cum ar fi sliderele, popupurile etc...**
-7. Daca apar probleme, sau daca nu arata la fel paginile, ii scrii lui Cezar pe Slack
+6. **Deschide paginile in browser si compara-le ca sa fii sigur ca arata si functioneaza la fel. Acorda atentie sporita la elementele pe care le initializezi cu javascript, cum ar fi sliderele, popupurile etc...** Daca apar probleme, sau daca nu arata la fel paginile, ii scrii lui Cezar pe Slack
+7. Daca totul este ok, redenumeste HTMLurile ne-minimizate in ce vrei tu, iar la cele minimizate le poti scoate `.min` din nume. Exemplu: `index.html` devine `index.default.html`, iar `index.min.html` devine `index.html`
 <!--
 ## **English docs**
 
