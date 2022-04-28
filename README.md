@@ -1,6 +1,6 @@
 # Landing Page Optimisation - **Instructiuni de folosire**
 
-## Structura OBLIGATORIE de fisiere a proiectului
+## Structura **obligatorie** de fisiere a proiectului
 ```
 folderul proiectului - poate avea orice nume
 └──css
