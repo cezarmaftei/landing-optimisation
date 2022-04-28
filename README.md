@@ -1,8 +1,6 @@
-# Landing Page Optimisation
+# Landing Page Optimisation - **Instructiuni de folosire**
 
-## **Instructiuni de folosire**
-
-### Structura OBLIGATORIE de fisiere a proiectului
+## Structura OBLIGATORIE de fisiere a proiectului
 ```
 folderul proiectului - poate avea orice nume
 └──css
@@ -14,11 +12,11 @@ folderul proiectului - poate avea orice nume
   etc.html
 ```
 
-### Operatiuni ce trebuiesc facute o singura data
+## Operatiuni ce trebuiesc facute o singura data
 - Instaleaza [Node.js](https://nodejs.org/en/download/)
 - Instaleaza [Grunt.js](https://gruntjs.com/): Pe Windows(CMD saur PowerShell) sau pe Mac(Terminal) `npm install -g grunt-cli`
 
-### Modificari in CSS
+## Modificari in CSS
 In toate CSSurile pagini trebuiesc modificate regulile care au background-image, in felul urmator:
 ```
 .banner {
@@ -41,7 +39,7 @@ Va deveni
 }
 ```
 
-### Metoda de folosire
+## Metoda de folosire
 1. [Downloadeaza arhiva](https://github.com/cezarmaftei/landing-optimisation/archive/refs/heads/main.zip). Daca nu merge, click pe butonul verde din dreapta sus, pe care scrie `Code` apoi `Download ZIP`. **Este foarte important sa downloadezi arhiva de fiecare data cand optimizezi o pagina pentru ca astfel folosesti ultima versiune a programului**
 2. Extrage arhiva in folderul paginii
 3. Deschide CMD/Powershell/Terminal **in folderul paginii**:
@@ -49,7 +47,9 @@ Va deveni
     - Pe Mac, navigheaza in folderul parinte al paginii(De ex daca pagina e in D:/work/pagina-mea, navighezi in D:/work), da click pe folderul paginii, apoi Finder->Services->New Terminal at Folder. Mai multe detalii [aici](https://www.maketecheasier.com/launch-terminal-current-folder-mac/#:~:text=Open%20the%20parent%20directory%20where,shortcut%20that%20you%20assigned%20before.)
 4. Scrie `npm i` si apasa enter. Asteapta sa se termine procesul.
 5. Scrie `grunt` si apasa enter. Asteapta sa se termine procesul. La final va aparea cate o versiune minmizata pentru fiecare html. Ex: pentru `index.html` se va genera un `index.min.html`
-
+6. **Deschide paginile in browser si compara-le ca sa fii sigur ca arata si functioneaza la fel. Acorda atentie sporita la elementele pe care le initializezi cu javascript, cum ar fi sliderele, popupurile etc...**
+7. Daca apar probleme, sau daca nu arata la fel paginile, ii scrii lui Cezar pe Slack
+<!--
 ## **English docs**
 
 This project is meant to optimize the landing pages before launch. What it does:
@@ -96,3 +96,4 @@ root
 3. Install Node dependancies `npm i`
 4. Run Grunt `grunt`
 5. Hurray!
+-->
