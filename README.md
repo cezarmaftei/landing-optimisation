@@ -42,7 +42,7 @@ Va deveni
 ```
 
 ### Metoda de folosire
-1. [Downloadeaza arhiva](https://github.com/cezarmaftei/landing-optimisation/archive/refs/heads/main.zip). Daca nu merge, click pe butonul verde din dreapta sus, pe care scrie `Code` apoi `Download ZIP`
+1. [Downloadeaza arhiva](https://github.com/cezarmaftei/landing-optimisation/archive/refs/heads/main.zip). Daca nu merge, click pe butonul verde din dreapta sus, pe care scrie `Code` apoi `Download ZIP`. **Este foarte important sa downloadezi arhiva de fiecare data cand optimizezi o pagina pentru ca astfel folosesti ultima versiune a programului**
 2. Extrage arhiva in folderul paginii
 3. Deschide CMD/Powershell/Terminal **in folderul paginii**:
     - Pe Windows, daca folosesti file explorer, mergi in folderul paginii si apasa Alt + F, apoi S, apoi A
