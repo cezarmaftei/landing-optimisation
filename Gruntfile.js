@@ -145,6 +145,9 @@ module.exports = function (grunt) {
 				'content': [page],
 				'safelist': [
 					/.*slick.*/,
+					/.*active.*/,
+					/.*webp.*/,
+					/.*no-webp.*/,
 					'button'
 				]
 			}
