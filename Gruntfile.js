@@ -100,18 +100,7 @@ module.exports = function (grunt) {
 		// Purge CSS
 		purgecss: {
 			// Look for purgecss_targets
-		},
-
-		//Watch Task
-		watch: {
-			options: {
-				livereload: false
-			},
-			scss_to_css: {
-				files: ['assets/src/scss/**/*.scss'],
-				tasks: ['sass:dev']
-			}
-		},
+		}
 	});
 
 	// Set concat page resources
