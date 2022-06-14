@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 	const fs = require('fs')
 	const path = require('path')
 	fs.readdirSync('./').forEach(file => {
-		if(path.extname(file) === '.html' && file.indexOf('.min') === -1) {
+		if (path.extname(file) === '.html' && file.indexOf('.min') === -1) {
 			//
 			// Start creating page resources object
 			//
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 			const cssFiles = pageHTMLContent.querySelectorAll('head [rel="stylesheet"]')
 			cssFiles.forEach(cssFile => {
 				const cssURL = cssFile.getAttribute('href')
-				if(cssURL.indexOf('http') === -1) {
+				if (cssURL.indexOf('http') === -1) {
 					resourceFiles[file].css.push(cssURL)
 				}
 			})
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 			const jsFiles = pageHTMLContent.querySelectorAll('script')
 			jsFiles.forEach(jsFile => {
 				const jsSRC = jsFile.getAttribute('src')
-				if(jsSRC && jsSRC.indexOf('http') === -1) {
+				if (jsSRC && jsSRC.indexOf('http') === -1) {
 					resourceFiles[file].js.push(jsSRC)
 				}
 			})
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
 
 	// Set concat page resources
 	grunt.registerTask('concat_targets', function () {
-		for(const page in resourceFiles) {
+		for (const page in resourceFiles) {
 			const pageName = page.replace('.html', '')
 
 			grunt.config(`concat.${pageName}_css.src`, resourceFiles[page].css)
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
 
 	// Set postcss page resources
 	grunt.registerTask('postcss_targets', function () {
-		for(const page in resourceFiles) {
+		for (const page in resourceFiles) {
 			const pageName = page.replace('.html', '')
 
 			grunt.config(`postcss.${pageName}.src`, `dest/style.${pageName}.css`)
@@ -128,7 +128,7 @@ module.exports = function (grunt) {
 
 	// Set purgecss pages with options
 	grunt.registerTask('purgecss_targets', function () {
-		for(const page in resourceFiles) {
+		for (const page in resourceFiles) {
 			const pageName = page.replace('.html', '')
 			const pageOptions = {
 				'content': [page],
@@ -137,6 +137,9 @@ module.exports = function (grunt) {
 					/.*active.*/,
 					/.*webp.*/,
 					/.*no-webp.*/,
+					/.*accordion.*/,
+					/.*tab.*/,
+					/.*collaps.*/,
 					'button'
 				]
 			}
@@ -151,7 +154,7 @@ module.exports = function (grunt) {
 
 	// Minify the HTML code and save it to a file
 	grunt.registerTask('minify_html', function () {
-		for(const page in resourceFiles) {
+		for (const page in resourceFiles) {
 			const pageName = page.replace('.html', '')
 
 			let pageHTMLContent = HTMLParser.parse(grunt.file.read(page))
@@ -205,7 +208,10 @@ module.exports = function (grunt) {
 		}
 
 		// Delete 'dest' folder
-		fs.rmSync('./dest', { recursive: true, force: true })
+		fs.rmSync('./dest', {
+			recursive: true,
+			force: true
+		})
 	})
 
 	grunt.registerTask('default', ['cwebp', 'concat_targets', 'concat', 'postcss_targets', 'postcss', 'purgecss_targets', 'purgecss', 'minify_html'])
