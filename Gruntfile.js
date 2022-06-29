@@ -140,6 +140,8 @@ module.exports = function (grunt) {
 					/.*accordion.*/,
 					/.*tab.*/,
 					/.*collaps.*/,
+					/.*mfp.*/,
+					/.*mm.*/,
 					'button'
 				]
 			}
